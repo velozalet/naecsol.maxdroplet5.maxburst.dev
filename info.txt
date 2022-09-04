@@ -1,0 +1,8 @@
+git add .
+git status
+git commit -m "Sep-01-2020"
+git push -u origin main
+		velozalet / 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
+------------------------------
+zip -r maxcanvas_child.zip maxcanvas_child/
+

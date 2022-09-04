@@ -1,0 +1,214 @@
+/* Heebo , Montserrat
+	#002557 - blue
+	#FFFFFF - white
+	#000000 - black
+	#EAEAEA - gray (as on header banner)
+	#D9D9D9 - gray (as on footer)
+*/
+
+/*#GENERAL*/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Heebo';
+	font-size: 1rem;
+}
+.circle{
+	border-radius: 50%;
+	margin: 0.15em;
+	/*font-size: 3em;*/
+	border: 1px solid #002557;
+	padding: 5px 6px;
+}
+.__location .circle{ padding: 4px 8px; }
+i.fa{
+	font-size:19px;
+	background: #EAEAEA;
+	color: #002557;
+	/*padding: 0.05em 0.07em;*/
+	cursor: pointer;
+}
+i.fa:hover{
+	background: #002557;
+	color:#FFFFFF;
+}
+
+a.__email, a.__tel, a.__location{
+	font-size: 15px; text-decoration:none; color: #002557;
+}
+a.__email:hover i.fa, a.__tel:hover i.fa, a.__location:hover i.fa{ background: #002557; color:#FFFFFF; }
+
+.button{
+	text-decoration: none;
+	text-transform:uppercase;
+	font-size:14px;
+	font-weight:700;
+	font-family: 'Heebo';
+	outline:none;
+	border:none;
+	padding: 10px 10px;
+	display: inline-block;
+	min-width:170px;
+	min-height:40px;
+	cursor:pointer;
+	transition:all .5s ease-in;
+}
+.button.button-white{ background:#FFFFFF; color:#002557; box-shadow: rgb(38 57 77) 0 20px 30px -10px; }
+	.button.button-white:hover{ background:#002557; color:#FFFFFF;  }
+.button.button-blue{ background:#002557; color:#FFFFFF; box-shadow: rgb(38 57 77) 0 20px 30px -10px; }
+	.button.button-blue:hover{ background:#FFFFFF; color:#002557;  }
+
+h1{ color:#FFFFFF; font-size:55px; font-weight:700; font-family:'Heebo'; text-transform:uppercase; }
+h2{ color:#FFFFFF; font-size:42px; font-weight:700; font-family:'Heebo'; text-transform:uppercase; }
+/*__/#GENERAL*/
+
+/*#BANNER*/
+.header-banner{
+	background-color:#EAEAEA;
+	padding: 7px 15px;
+}
+.header-banner .col-auto i.fa{ margin-right: 6px; }
+/*__/#BANNER*/
+
+/*#HEADER*/
+nav.navbar .navbar-brand > img{ width:90px; height:auto; }
+nav.navbar ul.navbar-nav .nav-item > .nav-link{
+	color: #000000;
+	font-size: 17px;
+}
+nav.navbar ul.navbar-nav .nav-item > .nav-link.current-menu-item,
+nav.navbar ul.navbar-nav .nav-item > .nav-link:hover,
+nav.navbar ul.navbar-nav .nav-item > .nav-link:active{ color: #002557; }
+
+nav.navbar .navbar-collapse { flex-grow: 0; }
+
+nav.navbar .navbar-toggler.collapsed{
+	padding: 5px 5px;
+	font-size: 1.25rem;
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+}
+nav.navbar .navbar-toggler{
+	padding: 5px 5px;
+	font-size: 1.25rem;
+	background-color: transparent;
+	border: 1px solid #002557;
+	border-radius: 50%;
+}
+nav.navbar .navbar-toggler:focus, nav.navbar .navbar-toggler:active, nav.navbar .navbar-toggler:hover, nav.navbar .navbar-toggler:visited{ box-shadow:none!important; }
+nav.navbar .navbar-toggler > .navbar-toggler-icon{ position: relative; top: -4px; }
+nav.navbar .navbar-toggler > .navbar-toggler-icon:before{ content: "\f00d"; font: normal normal normal 36px/1 FontAwesome; color:#002557; }
+nav.navbar .navbar-toggler.collapsed > .navbar-toggler-icon:before{ content: "\f0c9"; font: normal normal normal 36px/1 FontAwesome; color:#002557; }
+
+nav.navbar ul.navbar-nav .nav-item .dropdown-menu{ background-color:#002557; box-shadow:rgb(0 0 0 / 24%) 0px 3px 8px; }
+nav.navbar ul.navbar-nav .nav-item .dropdown-menu > li a.dropdown-item{ color:#FFFFFF; }
+nav.navbar ul.navbar-nav .nav-item .dropdown-menu > li a.dropdown-item:hover{ color: #002557; background-color:#FFFFFF; }
+
+nav.navbar hr.dropdown-divider{ height:1px; background-color:#FFFFFF; border:none; }
+
+/*__/#HEADER*/
+
+/*#FOOTER*/
+footer.site-footer{ background-color:#EAEAEA; padding:40px 15px 15px 15px; }
+footer.site-footer .footer-text .navbar-brand > img{ width:90px; height:auto; }
+footer.site-footer .footer-text .company-name{ text-transform:uppercase; font-size:25px; font-weight:700; font-family:'Heebo'; color:#000000; }
+footer.site-footer .footer-text .company-description{ font-size:14px; font-weight:400; font-family:'Heebo'; color:#000000; text-align:justify; word-wrap:break-word; }
+
+footer.site-footer .footer-info ul.navbar-nav .nav-item > .nav-link{ color:#000000; font-size:17px; }
+footer.site-footer .footer-info ul.navbar-nav .nav-item.current-menu-item > .nav-link,
+footer.site-footer .footer-info ul.navbar-nav .nav-item > .nav-link:hover,
+footer.site-footer .footer-info ul.navbar-nav .nav-item > .nav-link:active{ color:#002557; }
+
+footer.site-footer .footer-info .services-pages-list > div,
+footer.site-footer .footer-info .contact-us > div,
+footer.site-footer .footer-info .subscribe-us > div{ color:#000000; font-size:17px; }
+footer.site-footer .footer-info .services-pages-list ul{ list-style-type:none !important; }
+footer.site-footer .footer-info .services-pages-list ul > li > a{ font-size:15px; text-decoration:none; color:#000000; }
+footer.site-footer .footer-info .services-pages-list ul > li > a:hover{ color:#002557; }
+
+footer.site-footer .footer-info .contact-us ul{ list-style-type:none !important; }
+footer.site-footer .footer-info .contact-us ul > li > div{ margin-left:36px; font-size:14px; text-decoration:none; color:#000000; line-height:0; }
+footer.site-footer .footer-info .contact-us ul > li > div > a { font-size:14px; text-decoration:none; color:#000000; line-height:0; }
+footer.site-footer .footer-info .contact-us ul > li > a { color:#000000; font-size:14px; }
+footer.site-footer .footer-info .contact-us .__location .circle{ position:relative; top:7px; }
+
+footer.site-footer .footer-info .subscribe-us .follow-us span{ font-size:15px; font-weight:400; font-family:'Heebo'; color:#000000; }
+
+footer.site-footer .footer-banner .copyright-text{ font-size:12px; font-weight:400; font-family:'Montserrat'; color:#000000; }
+/*__/#FOOTER*/
+
+/*Flexible-Content: .about-us-section-container*/
+.about-us-section-container.section-video:after{
+	content: '';
+	background-color: #000000;
+	opacity: .7;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	z-index: 0;
+}
+.about-us-section-container{ background-size:cover; background-repeat:no-repeat; }
+.about-us-section-container p{ font-size:14px; color:#FFFFFF; line-height:2; }
+.about-us-section-container{ width:100%; min-height:505px; }
+.section-video{ position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.section-video .section-video-content{ width:40%; text-align:left; color:#fff; padding:15px; margin:10px; position:relative; z-index:1; }
+.section-video .video-container{ position:absolute; top:0; left:0; width:100%; }
+.section-video .video-container .video-container-color-overlay{ position:absolute; top:0; left:0; width:100%; height:100vh; background-color:#000000; opacity:0.7; }
+/*__/Flexible-Content: .about-us-section-container*/
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+	MEDIA QUERIES:
+*/
+@media screen and (max-width: 991px){
+	h1{ font-size:42px; }
+	h2{ font-size:38px; }
+}
+@media screen and (max-width: 767px){
+	h1{ font-size:38px; }
+	h2{ font-size:34px; }
+
+	/*Flexible-Content: .about-us-section-container*/
+	#about_us_section_container{ top:-190px; }
+	.section-video .section-video-content{ width:100%; }
+	/*__/Flexible-Content: .about-us-section-container*/
+}
+@media screen and (max-width: 575px){
+	/*#GENERAL*/
+	a.__email, a.__tel{ font-size: 13px; }
+	/*__/#GENERAL*/
+	/*#BANNER*/
+	.header-banner{ padding:7px 0; }
+	.header-banner .row div:nth-of-type(2){ padding-right: 0; }
+	.header-banner .row div:nth-of-type(3){ padding-left: 0; }
+	/*__/#BANNER*/
+	/*#FOOTER*/
+	footer.site-footer { padding: 15px 15px 15px 15px; }
+	footer.site-footer .footer-info .services-pages-list ul > li { line-height:1; }
+
+	footer.site-footer .footer-info ul.navbar-nav .nav-item:first-of-type > .nav-link{ padding-top:0 !important; }
+	/*footer.site-footer .footer-info ul.navbar-nav .nav-item > .nav-link.current-menu-item*/
+	/*__/#FOOTER*/
+
+	/*Flexible-Content: .about-us-section-container*/
+	.about-us-section-container{ min-height:475px; }
+	.section-video a.button{ min-width:170px; }
+	.about-us-section-container p {	line-height:1.5; }
+	/*__/Flexible-Content: .about-us-section-container*/
+
+}
