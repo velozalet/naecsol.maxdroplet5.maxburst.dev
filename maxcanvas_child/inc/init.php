@@ -61,3 +61,78 @@ function services_cpt_taxonomy() {
 	);
 } add_action( 'init', 'services_cpt_taxonomy');
 /**__/ADD CPT "services" and taxonomy for them */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**ADD CPT "Testimonials" and taxonomy for them */
+function testimonials_cpt() {
+	$labels = array(
+		'name'                => _x( 'Testimonials', 'Post Type General Name'),
+		'singular_name'       => _x( 'Testimonial', 'Post Type Singular Name'),
+		'menu_name'           => __( 'Testimonials'),
+		'parent_item_colon'   => __( 'Parent Testimonial'),
+		'all_items'           => __( 'All Testimonials'),
+		'view_item'           => __( 'View Testimonial'),
+		'add_new_item'        => __( 'Add New Testimonials'),
+		'add_new'             => __( 'Add New'),
+		'edit_item'           => __( 'Edit Testimonial'),
+		'update_item'         => __( 'Update Testimonial'),
+		'search_items'        => __( 'Search Testimonial'),
+		'not_found'           => __( 'Not Found'),
+		'not_found_in_trash'  => __( 'Not found in Trash'),
+	);
+	$args = array(
+		'label'               => __( 'Testimonials'),
+		'description'         => __( 'Testimonial'),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions'),
+		'taxonomies'          => array( 'testimonials-taxonomy' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 3.1,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' => true,
+		'menu_icon' => 'dashicons-testimonial',
+	);
+	register_post_type( 'testimonials', $args );
+} add_action( 'init', 'testimonials_cpt', 0 );
+function testimonials_cpt_taxonomy() {
+	register_taxonomy(
+		'testimonials-taxonomy',
+		'testimonials',
+		array(
+			'hierarchical' => true,
+			'label' => 'Testimonials Category',
+			'query_var' => true,
+			'has_archive' => false,
+			'exclude_from_search' => true,
+			'show_in_rest'  => true
+		)
+	);
+} add_action( 'init', 'testimonials_cpt_taxonomy');
+/**__/ADD CPT "Testimonials" and taxonomy for them */

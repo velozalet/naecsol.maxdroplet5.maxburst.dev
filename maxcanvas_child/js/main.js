@@ -133,7 +133,6 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	} );
 	splideBillboard.mount();
 
-
 	var splideBillboardSub = new Splide( '#splide_billboard_sub_slide', { //All settings: https://splidejs.com/guides/options
 		type: 'loop',
 		pagination: false,
@@ -149,5 +148,49 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	} );
 	splideBillboardSub.mount();
 	/*__/Splide slider on Billboard*/
+
+
+	/*Flexible-Content: .full-video-section-container*/
+	const video = document.getElementById("full_video_section_video");
+	const btn = document.getElementById("fullVideoSectionBtn");
+	if(video){
+		if(btn){
+			function fullVideoSectionContainerDirectionVideoPlayer(event) {
+				if(video.paused) {
+					video.play(); //btn.innerHTML = "Pause";
+					event.currentTarget.classList.remove('fa-play-circle');
+					event.currentTarget.classList.add('fa-pause');
+				}else {
+					video.pause(); //btn.innerHTML = "Play";
+					event.currentTarget.classList.remove('fa-pause');
+					event.currentTarget.classList.add('fa-play-circle');
+				}
+			}
+		}
+		btn.addEventListener('click',fullVideoSectionContainerDirectionVideoPlayer);
+	}
+	/*__/Flexible-Content: .full-video-section-container*/
+	
+	
+	/*__/Flexible-Content: .our-clients-section-container*/
+	var splideTestimonials = new Splide( '#testimonials_slider',{ //All settings: https://splidejs.com/guides/options
+		type: 'loop',
+		perPage: 2,
+		breakpoints: {
+			767: {
+				perPage: 1,
+			}
+		},
+		// width: '100%',
+		// focus : 'center',
+		gap: '35px', // padding: '20%',
+		perMove: 2,
+		pagination: false,
+		autoplay: false,
+		arrows: true
+	} );
+	splideTestimonials.mount();
+	/*__/Flexible-Content: .our-clients-section-container*/
+	
 	/*__/#HOME PAGE*/
 });

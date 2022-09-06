@@ -107,3 +107,8 @@ function get_subitems_for_menuitem($all_menu_arr, $ID_menuitem, $order= 'ASC'){
 		return $result;
 	}
 }
+
+function get_embed_link_youtube($original_youtube_link){
+	return str_replace("watch?v=","embed/", $original_youtube_link);
+}
+
