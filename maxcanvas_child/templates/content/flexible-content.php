@@ -16,6 +16,7 @@ if( have_rows('section_selection') ):
 		if( get_row_layout() == 'full_video_section' ){ get_template_part( 'templates/content/flexible-content/full_video_section' ); }
 		if( get_row_layout() == 'our_services_section' ){ get_template_part( 'templates/content/flexible-content/our_services_section' ); }
 		if( get_row_layout() == 'our_clients_section' ){ get_template_part( 'templates/content/flexible-content/our_clients_section' ); }
+		if( get_row_layout() == 'recent_news_posts' ){ get_template_part( 'templates/content/flexible-content/recent_news_posts' ); }
 	endwhile;
 endif;
 ?>

@@ -179,18 +179,53 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		breakpoints: {
 			767: {
 				perPage: 1,
+				perMove: 1
 			}
 		},
 		// width: '100%',
 		// focus : 'center',
-		gap: '35px', // padding: '20%',
+		gap: '25px', //padding: '20%',
 		perMove: 2,
 		pagination: false,
 		autoplay: false,
 		arrows: true
 	} );
 	splideTestimonials.mount();
+
+	var clientLogosSlider = new Splide( '#client_logos_slider',{ //All settings: https://splidejs.com/guides/options
+		type: 'loop',
+		perPage: 5,
+		breakpoints: {
+			767: {
+				perPage: 2,
+				perMove: 1
+			}
+		},
+		// width: '100%',
+		// focus : 'center',
+		gap: '25px', //padding: '20%',
+		perMove: 1,
+		pagination: false,
+		autoplay: false,
+		arrows: true
+	} );
+	clientLogosSlider.mount();
 	/*__/Flexible-Content: .our-clients-section-container*/
+
+	/*Flexible-Content: .recent-news-posts-container*/
+	var recentNewsSlider = new Splide( '#recent_news_slider',{ //All settings: https://splidejs.com/guides/options
+		type: 'loop',
+		perPage: 1,
+		// width: '100%',
+		// focus : 'center',
+		gap: '25px', //padding: '20%',
+		perMove: 1,
+		pagination: false,
+		autoplay: false,
+		arrows: true
+	} );
+	recentNewsSlider.mount();
+	/*__/Flexible-Content: .recent-news-posts-container*/
 	
 	/*__/#HOME PAGE*/
 });

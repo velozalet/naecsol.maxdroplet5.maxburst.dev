@@ -112,3 +112,19 @@ function get_embed_link_youtube($original_youtube_link){
 	return str_replace("watch?v=","embed/", $original_youtube_link);
 }
 
+function get_needs_posts($post_type, $numberposts, $category, $category_name, $orderby, $order){
+	$posts = get_posts( array(
+		'numberposts' => $numberposts,
+		'category'    => $category,
+		'category_name' => $category_name,
+		'orderby'     => $orderby,
+		'order'       => $order,
+		'include'     => array(),
+		'exclude'     => array(),
+		'meta_key'    => '',
+		'meta_value'  =>'',
+		'post_type'   => $post_type,
+		'suppress_filters' => false,
+	) );
+	return $posts;
+}

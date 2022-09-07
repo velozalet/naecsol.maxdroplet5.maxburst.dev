@@ -20,7 +20,7 @@
 	</div>
 	<div class="row mt-3">
 	<?php foreach( get_sub_field('services_posts_select') as $service_post ):?>
-		<div class="col-sm col-12 mb-sm-0 mb-2">
+		<div class="col-md col-12 mb-md-0 mb-2">
 			<div class="service-post" data-postId="<?=$service_post->ID;?>">
 				<a class="position-relative" href="<?=$service_post->guid;?>">
 					<article class="services-post d-grid align-items-end ps-2" style="background-image:url(<?=wp_get_attachment_url( get_post_thumbnail_id($service_post->ID) );?>);">

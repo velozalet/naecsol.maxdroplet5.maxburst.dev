@@ -1,52 +1,47 @@
 <?php
-//dd(get_sub_field('our_clients_section_background') );
-//dd(get_sub_field('our_clients_section_title') );
-//dd(get_sub_field('our_clients_section_logos') );
-		//dd(get_sub_field('our_clients_section_logos')[0]['client_logo'] )
+$our_clients_section_background = ( get_sub_field('our_clients_section_background') ) ? get_sub_field('our_clients_section_background') : 'https://naecsol.maxdroplet5.maxburst.dev/wp-content/uploads/2022/09/banner-color2.png';
+$testimonials_posts = get_needs_posts('testimonials', -1, 0, '', 'date', 'ASC');
+$our_clients_logos = get_sub_field('our_clients_section_logos');
 ?>
 <div id="our_clients_section_container" class="our-clients-section-container mt-5 position-relative">
-	<div class="background-image d-grid justify-content-center align-items-center" style="background-image: url(https://naecsol.maxdroplet5.maxburst.dev/wp-content/uploads/2022/09/banner-color2.png);">
-		<div class="our-clients-section-content position-relative" style="z-index:1;">
+	<div class="background-image d-sm-grid d-block justify-content-center align-items-center" style="background-image: url(<?=$our_clients_section_background;?>);">
+		<div class="our-clients-section-content position-relative py-5">
 			<div class="container">
-				<h2><?=get_sub_field('our_clients_section_title');?></h2>
+				<h2 class="text-center mb-3"><?=get_sub_field('our_clients_section_title');?></h2>
+
+				<?php if( count($testimonials_posts) > 0 ):?>
 				<div id="testimonials_slider" class="testimonials-slider splide" role="group" aria-label="Splide Basic HTML Example">
 					<div class="splide__track">
 						<ul class="splide__list">
-							<li class="splide__slide" style="background:white; outline:1px solid black;">
-								<div>
-									<h4>Title - 1</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<button class="btn btn-success">Learn more</button>
-									<p>Andrew</p>
+							<?php foreach($testimonials_posts as $testimonial_post):?>
+							<li class="splide__slide">
+								<div class="text-center px-3 py-3">
+									<div class="title-testimonial my-2"> <span>“</span><?=$testimonial_post->post_title;?><span>”</span> </div>
+									<p class="text-testimonial"><?=cut_string($testimonial_post->post_content,250);?></p>
+									<a class="learn-more-testimonial d-block mt-lg-5 mt-0 mb-3" href="<?=$testimonial_post->guid;?>">Learn more</a>
+									<p class="reviewer-of-name mb-0"><?=get_field('name_of_reviewer',$testimonial_post->ID);?></p>
+									<span class="position-of-reviewer"><?=get_field('caption_under_name_of_reviewer',$testimonial_post->ID);?></span>
 								</div>
 							</li>
-							<li class="splide__slide" style="background:white; outline:1px solid black;">
-								<div>
-									<h4>Title - 2</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<button class="btn btn-success">Learn more</button>
-									<p>Andrew</p>
-								</div>
-							</li>
-							<li class="splide__slide" style="background:white; outline:1px solid black;">
-								<div>
-									<h4>Title - 3</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<button class="btn btn-success">Learn more</button>
-									<p>Andrew</p>
-								</div>
-							</li>
-							<li class="splide__slide" style="background:white; outline:1px solid black;">
-								<div>
-									<h4>Title - 4</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<button class="btn btn-success">Learn more</button>
-									<p>Andrew</p>
-								</div>
-							</li>
+							<?php endforeach;?>
 						</ul>
 					</div>
 				</div>
+				<?php endif;?>
+				<div class="mt-5"></div>
+
+				<?php if( count($our_clients_logos) > 0 ):?>
+				<div id="client_logos_slider" class="client-logos-slider splide mt-3" role="group" aria-label="Splide Basic HTML Example">
+					<div class="splide__track">
+						<ul class="splide__list">
+						<?php foreach($our_clients_logos as $client_logo):?>
+							<li class="splide__slide text-center"> <img src="<?=$client_logo['client_logo'];?>" alt="logo of clients / <?=get_bloginfo('name');?>"> </li>
+						<?php endforeach;?>
+						</ul>
+					</div>
+				</div>
+				<?php endif;?>
+				<div class="mb-3"></div>
 			</div>
 		</div>
 	</div>

@@ -62,25 +62,6 @@ function services_cpt_taxonomy() {
 } add_action( 'init', 'services_cpt_taxonomy');
 /**__/ADD CPT "services" and taxonomy for them */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**ADD CPT "Testimonials" and taxonomy for them */
 function testimonials_cpt() {
 	$labels = array(

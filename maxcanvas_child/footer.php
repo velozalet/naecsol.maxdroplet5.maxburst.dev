@@ -5,7 +5,7 @@
  * @package maxcanvas
  */
 ?>
-<footer class="site-footer" role="contentinfo"> <!--style="display: none !important;"-->
+<footer class="site-footer position-relative" role="contentinfo"> <!--style="display: none !important;"-->
 	<div class="container-lg">
 		<div class="row">
 			<div class="footer-text">
@@ -152,7 +152,6 @@
 	</div><!-- .container -->
 
 </footer><!-- .site-footer -->
-
 <?php wp_footer(); ?>
 </body>
 </html>
