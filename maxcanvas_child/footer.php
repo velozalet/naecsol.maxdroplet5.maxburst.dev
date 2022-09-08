@@ -5,7 +5,7 @@
  * @package maxcanvas
  */
 ?>
-<footer class="site-footer position-relative" role="contentinfo"> <!--style="display: none !important;"-->
+<footer class="site-footer position-relative"> <!--style="display: none !important;"-->
 	<div class="container-lg">
 		<div class="row">
 			<div class="footer-text">
@@ -32,24 +32,6 @@
 			<div class="footer-info pt-2">
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-sm-6 col-auto">
-
-<!--						<ul class="navbar-nav">-->
-<!--							<li class="nav-item">-->
-<!--								<a class="nav-link current-menu-item fw-bold pt-1" aria-current="page" href="#">Home</a>-->
-<!--							</li>-->
-<!--							<li class="nav-item">-->
-<!--								<a class="nav-link fw-bold py-1" href="#">Services</a>-->
-<!--							</li>-->
-<!--							<li class="nav-item">-->
-<!--								<a class="nav-link fw-bold py-1" href="#">Resources</a>-->
-<!--							</li>-->
-<!--							<li class="nav-item">-->
-<!--								<a class="nav-link fw-bold py-1" href="#">News</a>-->
-<!--							</li>-->
-<!--							<li class="nav-item">-->
-<!--								<a class="nav-link fw-bold py-1" href="#">Contact</a>-->
-<!--							</li>-->
-<!--						</ul>-->
 						<?php
 						$args = [
 							'theme_location'  => 'secondary',
@@ -96,7 +78,7 @@
 								<ul class="ps-0">
 									<li>
 									<?php if( get_fields('options')['site_settings']['location_place'] ):?>
-										<a class="__location" href="<?=get_fields('options')['site_settings']['link_on_locationgoogle_map'];?>" target="_blank"><i class="fa fa-map-marker circle"></i><?=get_fields('options')['site_settings']['location_place'];?></a>
+										<a class="__location" href="<?=get_fields('options')['site_settings']['link_on_locationgoogle_map'];?>" target="_blank"><img class="me-2 mt-2" src="<?=get_stylesheet_directory_uri();?>/img/gps-footer.svg"/><?=get_fields('options')['site_settings']['location_place'];?></a> <!--<i class="fa fa-map-marker circle"></i>-->
 									<?php endif;?>
 									<?php if( get_fields('options')['site_settings']['country_and_city'] ):?>
 										<div>
@@ -105,10 +87,10 @@
 									<?php endif;?>
 									</li>
 									<li class="pt-3 pb-1">
-										<a class="__email py-2" href="mailto:<?=get_fields('options')['site_settings']['site_email'];?>"><i class="fa fa-envelope-o circle"></i><?=get_fields('options')['site_settings']['site_email'];?></a>
+										<a class="__email py-2" href="mailto:<?=get_fields('options')['site_settings']['site_email'];?>"><img class="me-2" src="<?=get_stylesheet_directory_uri();?>/img/email-footer.svg"/><?=get_fields('options')['site_settings']['site_email'];?></a> <!--<i class="fa fa-envelope-o circle"></i>-->
 									</li>
 									<li class="py-1">
-										<a class="__tel py-2" href="tel:<?=get_numerics( get_fields('options')['site_settings']['site_telephon'] );?>"><i class="fa fa-phone circle"></i><?=get_fields('options')['site_settings']['site_telephon'];?></a>
+										<a class="__tel py-2" href="tel:<?=get_numerics( get_fields('options')['site_settings']['site_telephon'] );?>"><img class="me-2" src="<?=get_stylesheet_directory_uri();?>/img/phone-footer.svg"/><?=get_fields('options')['site_settings']['site_telephon'];?></a> <!--<i class="fa fa-phone circle"></i>-->
 									</li>
 								</ul>
 							</div>
@@ -124,13 +106,13 @@
 								<div> <span>Follow us</span>
 								<?php if( get_fields('options')['site_settings']['social_links'] ):?>
 									<?php if( get_fields('options')['site_settings']['social_links'][0]['facebook'] ):?>
-										<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["facebook"];?>" target="_blank"><i class="fa fa-facebook circle">&nbsp;</i></a>
+										<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["facebook"];?>" target="_blank"><img class="ms-2" src="<?=get_stylesheet_directory_uri();?>/img/facebook-footer.svg"/></a> <!--<i class="fa fa-facebook circle">&nbsp;</i>-->
 									<?php endif;?>
 									<?php if( get_fields('options')['site_settings']['social_links'][0]['linkedin'] ):?>
-										<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["linkedin"];?>" target="_blank"><i class="fa fa-linkedin circle"></i></a>
+										<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["linkedin"];?>" target="_blank"><img class="ms-2" src="<?=get_stylesheet_directory_uri();?>/img/in-footer.svg"/></a> <!--<i class="fa fa-linkedin circle"></i>-->
 									<?php endif;?>
 									<?php if( get_fields('options')['site_settings']['social_links'][0]['twitter'] ):?>
-										<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["twitter"];?>" target="_blank"><i class="fa fa-twitter circle"></i></a>
+										<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["twitter"];?>" target="_blank"><img class="ms-2" src="<?=get_stylesheet_directory_uri();?>/img/twitter-footer.svg"/></a> <!--<i class="fa fa-twitter circle"></i>-->
 									<?php endif;?>
 								<?php endif;?>
 								</div>
@@ -152,6 +134,6 @@
 	</div><!-- .container -->
 
 </footer><!-- .site-footer -->
-<?php wp_footer(); ?>
+<?php wp_footer();?>
 </body>
 </html>

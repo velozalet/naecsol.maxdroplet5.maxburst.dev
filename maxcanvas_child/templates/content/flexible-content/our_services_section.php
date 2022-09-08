@@ -12,11 +12,14 @@
 				<?php endif;?>
 			</div>
 		</div>
+
+		<?php if( get_sub_field('about_us_section_image') ):?>
 		<div class="col-6 align-self-center ps-xl-5 ps-md-3 d-md-flex d-none">
 			<figure>
 				<img class="img-fluid" src="<?=get_sub_field('about_us_section_image');?>" alt="<?=get_bloginfo('name');?>">
 			</figure>
 		</div>
+		<?php endif;?>
 	</div>
 	<div class="row mt-3">
 	<?php foreach( get_sub_field('services_posts_select') as $service_post ):?>

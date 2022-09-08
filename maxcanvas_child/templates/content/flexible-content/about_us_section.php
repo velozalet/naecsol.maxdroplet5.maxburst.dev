@@ -6,7 +6,7 @@
 			<div class="row justify-content-md-end justify-content-center px-md-0 px-3">
 				<div class="col-auto section-video-content text-md-start text-center">
 					<h2><?=get_sub_field('title');?></h2>
-					<p><?=get_sub_field('description');?></p>
+					<?=get_sub_field('description');?>
 
 					<?php $link = get_sub_field('optional_button_link'); if($link): $link_target = ($link['target']) ? $link['target'] : '_self'; endif;?>
 					<?php if($link):?>

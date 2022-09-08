@@ -7,8 +7,8 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="<?php bloginfo( 'charset' );?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <?php if (strpos($_SERVER['HTTP_USER_AGENT'],"MSIE 8")) { header("X-UA-Compatible: IE=Edge");} ?>
@@ -45,7 +45,6 @@
 	<!-- end banner-->
 	<!--NavBar-->
 	<nav class="navbar navbar-expand-sm navbar-white bg-white sticky-top p-0">
-		<?php //dd(get_fields('options'));?>
 		<div class="container">
 			<a class="navbar-brand" href="<?=esc_url(home_url());?>">
 			<?php if( get_fields('options')['site_settings']['site_logo']['url'] ):?>
@@ -53,10 +52,7 @@
 			<?php endif;?>
 			</a>
 			<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon">
-					<!--<i class="fa fa-close" style="font-size:36px"></i> d-sm-block d-none-->
-					<!--<i class="fa fa-navicon d-sm-none d-block" style="font-size:36px"></i>-->
-				</span>
+				<span class="navbar-toggler-icon"></span>
 			</button>
 			<?php
 			$menuitems = get_all_menu('primary','ASC');
@@ -65,21 +61,6 @@
 			?>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!--mr-auto-->
-<!--					<li class="nav-item">-->
-<!--						<a class="nav-link current-menu-item" aria-current="page" href="#">Home</a>-->
-<!--					</li>-->
-<!--					<li class="nav-item dropdown">-->
-<!--						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>-->
-<!--						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">-->
-<!--							<li><a class="dropdown-item" href="#">US Customhouse Brokerage Service</a></li>-->
-<!--							<li><a class="dropdown-item" href="#">E-Commerce Import Solutions</a></li>-->
-<!--							<li><a class="dropdown-item" href="#">Automated Manifest Solutions</a></li>-->
-<!--						</ul>-->
-<!--					</li>-->
-<!--					<li class="nav-item"> <a class="nav-link" href="#">Resources</a> </li>-->
-<!--					<li class="nav-item"> <a class="nav-link" href="#">News</a> </li>-->
-<!--					<li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>-->
-
 					<?php for( $i=0; $i < count($menuitems); $i++ ):?>
 						<?php $currentUrl = $_SERVER['REQUEST_URI']; if( $_SERVER['REQUEST_URI'] == '/' ){ $currentUrl = "/home/"; }?>
 						<?php if( $menuitems[$i]->menu_item_parent == '0' && $menuitems[$i]->post_status == 'publish' ):?>
@@ -110,18 +91,25 @@
 
 					<div class="d-sm-none mt-3 d-block">
 						<li class="nav-item mb-2">
-							<a class="__tel" href="tel:5168213830"><i class="fa fa-phone circle"></i>516-821-3830</a>
+							<a class="__tel" href="tel:<?=get_numerics( get_fields('options')['site_settings']['site_telephon'] );?>"><i class="fa fa-phone circle"></i><?=get_fields('options')['site_settings']['site_telephon'];?></a>
 						</li>
 						<li class="nav-item mb-2">
-							<a class="__email" href="mailto:info@naecsol.com"><i class="fa fa-envelope-o circle"></i>info@naecsol.com</a>
+							<a class="__email" href="mailto:<?=get_fields('options')['site_settings']['site_email'];?>"><i class="fa fa-envelope-o circle"></i><?=get_fields('options')['site_settings']['site_email'];?></a>
 						</li>
 						<li class="nav-item mb-3">
-							<a class="social-link" href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook circle">&nbsp;</i></a>
-							<a class="social-link" href="https://www.facebook.com" target="_blank"><i class="fa fa-linkedin circle"></i></a>
-							<a class="social-link" href="https://www.facebook.com" target="_blank"><i class="fa fa-twitter circle"></i></a>
+							<?php if( get_fields('options')['site_settings']['social_links'] ):?>
+								<?php if( get_fields('options')['site_settings']['social_links'][0]['facebook'] ):?>
+									<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["facebook"];?>" target="_blank"><i class="fa fa-facebook circle">&nbsp;</i></a>
+								<?php endif;?>
+								<?php if( get_fields('options')['site_settings']['social_links'][0]['linkedin'] ):?>
+									<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["linkedin"];?>" target="_blank"><i class="fa fa-linkedin circle"></i></a>
+								<?php endif;?>
+								<?php if( get_fields('options')['site_settings']['social_links'][0]['twitter'] ):?>
+									<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["twitter"];?>" target="_blank"><i class="fa fa-twitter circle"></i></a>
+								<?php endif;?>
+							<?php endif;?>
 						</li>
 					</div>
-
 				</ul>
 			</div>
 		</div>
