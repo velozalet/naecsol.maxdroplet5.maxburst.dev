@@ -3,7 +3,7 @@
 		<div class="col-md-6 col-12 align-self-center pe-xl-5 pe-md-0 text-md-start text-center">
 			<div class="content pe-xl-5 pe-md-0">
 				<h2><?=get_sub_field('title');?></h2>
-				<p><?=get_sub_field('text');?></p>
+				<?=get_sub_field('text');?>
 				<?php $link = get_sub_field('optional_button_link'); if($link): $link_target = ($link['target']) ? $link['target'] : '_self'; endif;?>
 				<?php if($link):?>
 					<p class="text-md-start text-center">

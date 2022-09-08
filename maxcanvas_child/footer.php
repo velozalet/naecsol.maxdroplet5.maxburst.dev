@@ -5,7 +5,7 @@
  * @package maxcanvas
  */
 ?>
-<footer class="site-footer position-relative"> <!--style="display: none !important;"-->
+<footer class="site-footer">
 	<div class="container-lg">
 		<div class="row">
 			<div class="footer-text">

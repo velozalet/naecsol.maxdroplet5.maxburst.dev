@@ -128,3 +128,4 @@ function get_needs_posts($post_type, $numberposts, $category, $category_name, $o
 	) );
 	return $posts;
 }
+//apply_filters('the_content', $testimonial_post->post_content);
