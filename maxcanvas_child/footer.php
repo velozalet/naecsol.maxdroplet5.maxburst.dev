@@ -82,7 +82,7 @@
 									<?php endif;?>
 									<?php if( get_fields('options')['site_settings']['country_and_city'] ):?>
 										<div>
-											<a href="<?=get_fields('options')['site_settings']['link_on_locationgoogle_map'];?>" target="_blank"><?=get_fields('options')['site_settings']['country_and_city'];?></a>
+											<a href="<?=get_fields('options')['site_settings']['link_on_locationgoogle_map'];?>" target="_blank" data-bs-toggle="tooltip" title="Show On Google Map"><?=get_fields('options')['site_settings']['country_and_city'];?></a>
 										</div>
 									<?php endif;?>
 									</li>

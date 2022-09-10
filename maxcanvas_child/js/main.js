@@ -264,5 +264,19 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			}
 		});
 	}
+	if( document.getElementById('services_list_mobile') ){
+		var servicesListSlider = new Splide( '#services_list_mobile',{ //All settings: https://splidejs.com/guides/options
+			type: 'loop',
+			perPage: 1,
+			// width: '100%',
+			// focus : 'center',
+			gap: '25px', //padding: '20%',
+			perMove: 1,
+			pagination: false,
+			autoplay: false,
+			arrows: true
+		} );
+		servicesListSlider.mount();
+	}
 	/*__/Single Page Service*/
 });
