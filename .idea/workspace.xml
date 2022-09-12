@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c712dfdd-7f54-49f9-a120-f47e3ca2cad5" name="Default" comment="" />
+    <list default="true" id="c712dfdd-7f54-49f9-a120-f47e3ca2cad5" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/maxcanvas_child/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/maxcanvas_child/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/inc/init.php" beforeDir="false" afterPath="$PROJECT_DIR$/maxcanvas_child/inc/init.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/maxcanvas_child/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/maxcanvas_child/templates/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content/recent_news_posts.php" beforeDir="false" afterPath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content/recent_news_posts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/maxcanvas_child/templates/news.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +43,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="67" />
     <option name="y" value="25" />
     <option name="width" value="1533" />
@@ -46,7 +55,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -109,6 +117,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -144,27 +153,30 @@
       <workItem from="1662566617581" duration="127000" />
       <workItem from="1662620424588" duration="674000" />
       <workItem from="1662663284481" duration="57000" />
+      <workItem from="1662837248219" duration="70000" />
+      <workItem from="1662870716072" duration="777000" />
+      <workItem from="1663009199258" duration="281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1086000" />
+    <option name="totallyTimeSpent" value="2214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26294553" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27505043" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5902965" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5943396" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -181,6 +193,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/info.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
