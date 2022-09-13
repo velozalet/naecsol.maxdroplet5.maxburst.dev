@@ -1,4 +1,5 @@
 /*Splide slider on Billboard*/
+#splide_billboard_slide .splide__list{ position:relative; z-index:0; }
 #splide_billboard_slide .splide__list .splide__slide{
 	min-height: 605px;
 	background-repeat: no-repeat;

@@ -128,4 +128,72 @@ function get_needs_posts($post_type, $numberposts, $category, $category_name, $o
 	) );
 	return $posts;
 }
-//apply_filters('the_content', $testimonial_post->post_content);
+//______________________________________________________________________________________________________________________
+
+function get_posts_for_pagination($post_type, $posts_per_page, $post_status, $category, $category_name, $orderby, $order){
+	$posts = get_posts( array(
+		'post_status' => $post_status,
+		'category'    => $category,
+		'category_name' => $category_name,
+		'orderby'     => $orderby,
+		'order'       => $order,
+		'post_type'   => $post_type,
+		'posts_per_page' => $posts_per_page,
+		'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1 ),
+		/*'suppress_filters' => false,*/
+	) );
+	return $posts;
+}
+function posts_navigation($posts_per_page, $post_type, $post_status, $orderby, $order, $page_pagination_part) {
+	echo '<ul class="pagination"> <!-- pagination-lg or pagination-sm -->';
+	$all_posts_for_count = get_posts(
+		array(
+			'post_type' => $post_type,
+			'post_status' => $post_status,
+			'orderby' => $orderby,
+			'order' => $order,
+			'posts_per_page' => -1
+		)
+	);
+	$all_posts_cnt = count($all_posts_for_count);
+
+	$pages_cnt_total = $all_posts_cnt/$posts_per_page;
+
+	$decimal_part = floor($pages_cnt_total);
+	if( $pages_cnt_total == $decimal_part ){
+		$pages_cnt_total = $decimal_part;
+	}elseif( $pages_cnt_total > $decimal_part && $pages_cnt_total < $decimal_part + 1 ){
+		$pages_cnt_total = $decimal_part + 1;
+	}
+	$current_page_number = get_query_var('paged');
+	if( $current_page_number > 1 ):
+		printf(
+			'<li class="page-item">
+            <a class="page-link" href="%spage/%s/" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> </a>
+        </li>', home_url($page_pagination_part), ($current_page_number - 1)
+		);
+	endif;
+
+	for($cnt_iteration = 0; $cnt_iteration <= $pages_cnt_total; $cnt_iteration++):
+		if( !$cnt_iteration == 0):
+			if( $current_page_number == 0 ){ $current_page_number = 1; }
+
+			if( $current_page_number === $cnt_iteration ){
+				printf('<li class="page-item active"><span class="page-link">%u</span></li>',$current_page_number);
+			}else{
+				printf(
+					'<li class="page-item"><a class="page-link" href="%spage/%u/">%u</a></li>', home_url($page_pagination_part), $cnt_iteration, $cnt_iteration
+				);
+			}
+		endif;
+	endfor;
+
+	if( $current_page_number < $pages_cnt_total ):
+		printf(
+			'<li class="page-item">
+            <a class="page-link" href="%spage/%u/" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a>
+        </li>', home_url($page_pagination_part), ($current_page_number + 1)
+		);
+	endif;
+	echo '</ul>';
+}

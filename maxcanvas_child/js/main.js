@@ -322,4 +322,7 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		});
 	}
 	/*__/Single Page News*/
+
 });
+
+new WOW().init(); //initial the WOW animation library

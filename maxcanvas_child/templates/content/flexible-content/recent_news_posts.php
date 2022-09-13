@@ -1,7 +1,8 @@
 <?php
+$news_cat_ID = 5; //This is category "News" of News Post
 $number_of_posts_to_display = get_sub_field('number_of_posts_to_display');
 if( $number_of_posts_to_display == '0' || !$number_of_posts_to_display ){ $number_of_posts_to_display = 1; }
-$recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, 0, '', 'date', 'DESC');
+$recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_cat_ID, '', 'date', 'DESC');
 ?>
 <div id="recent_news_posts" class="recent-news-posts-container mt-5 mb-4 position-relative">
 	<div class="container-lg">

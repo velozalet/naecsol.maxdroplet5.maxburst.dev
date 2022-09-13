@@ -7,7 +7,7 @@
 ?>
 <?php get_header();?>
 
-<div class="contact-page-container position-relative mb-5" style="display:none;">
+<div class="contact-page-container position-relative mb-5">
 	<?php get_template_part('templates/component/page-banner');?>
 
 	<section class="contact-page-info-block">

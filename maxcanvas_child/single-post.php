@@ -1,6 +1,8 @@
  <?php get_header();?>
 <?php
-$recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, 0, '', 'date', 'DESC');
+$news_cat_ID = 5; //This is category "News" of News Post
+$number_of_posts_to_display = 3;
+$recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_cat_ID, '', 'date', 'DESC');
 ?>
 
 <div class="single-news-container position-relative mb-md-5 mb-1">
@@ -39,7 +41,7 @@ $recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, 0, '',
 				<?php endif;?>
 
 				<?php if( get_field('flexible_content_areas_for_news')['column_2_flexible_content'] ):?>
-					<div class="col-md-6 col-12 single-news-content-column_2">
+					<div class="col-md-6 col-12 single-news-content-column_2" style="display: none">
 						<?php foreach( get_field('flexible_content_areas_for_news')['column_2_flexible_content'] as $column2_flexblock ):?>
 							<?php if( $column2_flexblock['acf_fc_layout'] == 'image_upload' ):?>
 								<?php if( $column2_flexblock['image_upload'] ):?>

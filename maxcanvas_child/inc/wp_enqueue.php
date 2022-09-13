@@ -11,6 +11,7 @@ if ( ! function_exists( 'maxcanvas_child_scripts_styles' ) ):
 		wp_enqueue_style( 'heebo_font', 'https://fonts.googleapis.com/css2?family=Heebo', array() );
 		wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' );
 	//____________________________________include styles:
+		wp_enqueue_style( 'wow-css', get_stylesheet_directory_uri() . '/wow-animation/animate.min.css', array() );
 		wp_enqueue_style( 'splideslider-css', get_stylesheet_directory_uri() . '/splide_slider/splide.min.css', array() );
 		wp_enqueue_style( 'bootstrap5-scc', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', array() );
 		wp_enqueue_style( 'main-css', get_stylesheet_directory_uri() . '/css/main.css', array() );
