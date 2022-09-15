@@ -46,7 +46,6 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 
 	/*#HOME PAGE*/
 	let splideBillboardSlide = document.getElementById('splide_billboard_slide');
-
 	if(splideBillboardSlide){
 		let splideBillboardSlidesCollectons = splideBillboardSlide.querySelectorAll('.splide__list > li.billboard-slide--item');
 		//------------------------------------------------
@@ -156,7 +155,6 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		/*__/Splide slider on Billboard*/
 	}
 
-
 	/*Flexible-Content: .full-video-section-container*/
 	const video = document.getElementById("full_video_section_video");
 	const __video_btn = document.querySelector(".__video--btn");
@@ -180,7 +178,6 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	}
 	/*__/Flexible-Content: .full-video-section-container*/
 	
-	
 	/*__/Flexible-Content: .our-clients-section-container*/
 	if( document.getElementById('testimonials_slider') ){
 		var splideTestimonials = new Splide( '#testimonials_slider',{ //All settings: https://splidejs.com/guides/options
@@ -201,6 +198,29 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			arrows: true
 		} );
 		splideTestimonials.mount();
+
+
+		const testimonialModalWindow = document.getElementById('learnMoreTestimonial');
+		let testimonialTitleModal = testimonialModalWindow.querySelector('.modal-body .modal-title'),
+			testimonialTextModal = testimonialModalWindow.querySelector('.modal-body .modal-text'),
+			testimonialReviewerNameModal = testimonialModalWindow.querySelector('.modal-body .modal-reviewer-of-name'),
+			testimonialPositionReviewerModal = testimonialModalWindow.querySelector('.modal-body .modal-position-of-reviewer');
+
+		const testimonialsTriggerModalWindowsCollection = document.querySelectorAll('.our-clients-section-container .testimonials-slider li.splide__slide a.learn-more-testimonial'); //console.log(testimonialsTriggerModalWindowsCollection);
+
+		function xxFunction(event){
+			let titleTestimonial = event.currentTarget.parentElement.querySelector('.title-testimonial').textContent; testimonialTitleModal.innerHTML = titleTestimonial;
+
+			/*let textTestimonial = event.currentTarget.parentElement.querySelector('.text-testimonial-full > div');  console.log(textTestimonial);
+			testimonialTextModal.replaceWith(textTestimonial);*/
+			let textTestimonial = event.currentTarget.parentElement.querySelector('.text-testimonial-full > div').textContent; testimonialTextModal.innerHTML = textTestimonial;
+
+			let reviewerNameTestimonial = event.currentTarget.parentElement.querySelector('.reviewer-of-name').textContent; testimonialReviewerNameModal.innerHTML = reviewerNameTestimonial;
+			let positionReviewerTestimonial = event.currentTarget.parentElement.querySelector('.position-of-reviewer').textContent; testimonialPositionReviewerModal.innerHTML = positionReviewerTestimonial;
+		}
+		testimonialsTriggerModalWindowsCollection.forEach(
+			(item, index, collection) => { item.addEventListener('click', xxFunction); }
+		);
 	}
 
 	if( document.getElementById('client_logos_slider') ){
@@ -324,7 +344,7 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	/*__/Single Page News*/
 
 	/*Preloader*/
-	const loading = document.getElementById('loading'); setTimeout(() => { loading.remove(); },1500);
+	const loading = document.getElementById('loading'); if(loading){ setTimeout(() => { loading.remove(); },1500) };
 	/*__/Preloader*/
 });
 

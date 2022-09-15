@@ -9,15 +9,15 @@
 <?php
 $news_cat_ID = 6; //This is category "Resources" of News Post
 $number_of_posts_to_display = -1;
-$resources_posts = get_needs_posts('post', $number_of_posts_to_display, $news_cat_ID, '', 'date', 'ASC'); //dd($resources_posts);
+$resources_posts = get_needs_posts('post', $number_of_posts_to_display, $news_cat_ID, '', 'date', 'ASC');
 $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 ?>
 <div class="resources-page-container position-relative mb-md-5 mb-1">
-	<?php //get_template_part('templates/component/page-banner');?>
+	<?php get_template_part('templates/component/page-banner');?>
 
 	<!--All resources except "Excel"-->
 	<div class="container-lg mt-md-5 mt-2">
-		<h2 style="display:none;">Helpful Links</h2>
+		<h2 class="text-md-start text-center">Helpful Links</h2>
 		<div class="row mt-3 justify-content-center">
 		<?php foreach( $resources_posts as $resource ):?>
 			<?php if( get_field('resource_type_selection', $resource->ID) !== 'excel_document' ):?>
@@ -61,17 +61,17 @@ $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 			<?php endif;?>
 		<?php endforeach;?>
 		</div>
-		<hr style="color:#002557; display:none;">
+		<hr style="color:#002557;">
 	</div>
 	<!--All resources except "Excel"-->
 
 	<!--Excel documents-->
-	<div class="container-lg mt-md-5 mt-2" style="display:none;">
-		<h2>FORMS</h2>
+	<div class="container-lg mt-md-5 mt-2">
+		<h2 class="text-md-start text-center">FORMS</h2>
 		<div class="row mt-3 justify-content-center">
 			<?php foreach( $resources_posts as $resource ):?>
 				<?php if( get_field('resource_type_selection', $resource->ID) == 'excel_document' ):?>
-					<div class="resources-excels-forms col-xl-4 col-md-6 col-12 mb-sm-0 mb-2">
+					<div class="resources-excels-forms col-xl-4 col-md-6 col-12 mb-sm-3 mb-2">
 						<?php
 						$post_attachment_img = wp_get_attachment_url( get_post_thumbnail_id($resource->ID) );
 						$resource_type_selection = get_field('resource_type_selection', $resource->ID);
@@ -85,12 +85,17 @@ $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 						?>
 
 						<div class="news-post helpful-post" data-postid="<?=$resource->ID;?>">
-							<a class="position-relative" href="<?=$resource_upload;?>" target="_blank" data-bs-toggle="tooltip" title="<?=$resource_type;?>">
-								<article class="news-post-article news-post-article-helpful" style="background-image:url(<?=$post_attachment_img;?>);"></article>
+							<a class="position-relative" href="<?=$resource_upload;?>" data-bs-toggle="tooltip" title="<?=$resource_type;?>">
+								<article class="news-post-article news-post-article-helpful position-relative" style="background-image:url(<?=get_stylesheet_directory_uri();?>/img/bg-resources-excel-form.png);" alt="Naecsol Excel Form">
+									<div class="news-title text-center px-3">
+										<h5 class="text-center"><?=$resource->post_title;?></h5>
+										<?=$resource->post_content;?>
+										<button type="button" class="button button-blue me-2 text-center">Download Form</button>
+									</div>
+								</article>
 							</a>
-							<p class="news-title"><a href="<?=$resource_upload;?>" target="_blank"><?=$resource->post_title;?></a></p>
-						</div>
 
+						</div>
 					</div>
 				<?php endif;?>
 			<?php endforeach;?>
