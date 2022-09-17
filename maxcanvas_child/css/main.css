@@ -70,6 +70,12 @@ a.__email:hover i.fa, a.__tel:hover i.fa, a.__location:hover i.fa{ background: #
 h1{ color:#FFFFFF; font-size:55px; font-weight:700; font-family:'Heebo'; text-transform:uppercase; line-height: 1; }
 h2{ color:#FFFFFF; font-size:42px; font-weight:700; font-family:'Heebo'; text-transform:uppercase; line-height: 1; }
 
+.equal {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	/*align-items: center;*/
+}
 /*Preloader*/
 #loading{
 	background-color: #000000;
@@ -469,6 +475,8 @@ i.fa-pause.__video--btn:hover{ opacity:1.0; color:#002557; }
 /*__/Single Page Service*/
 
 /*Contact Us Page*/
+.contact-page-container .contact-page-form h2{ color:#002557; }
+.contact-page-container .contact-page-form p{ color:#000000; font-size:14px; font-weight:300; font-family:'Heebo'; padding:0 10px; line-height:1; }
 .contact-page-container .contact-page-info-block a{ text-decoration:none; }
 .contact-page-container .contact-page-info-block h5{ color:#002557; font-size:21px; font-weight:700; font-family:'Heebo'; line-height:1; }
 .contact-page-container .contact-page-info-block p{ color:#000000; font-size:14px; font-weight:300; font-family:'Heebo'; line-height:1; }
@@ -476,6 +484,7 @@ i.fa-pause.__video--btn:hover{ opacity:1.0; color:#002557; }
 .contact-page-container .contact-page-info-block a:hover p{ color:#002557; }
 .contact-page-container .contact-page-info-block .row{ box-shadow:rgb(38 57 77) 0 20px 30px -10px; }
 .contact-page-container .contact-page-info-block .row > div:nth-of-type(2){ border-right:1px solid #002557; border-left:1px solid #002557; }
+.contact-page-container .contact-page-form{ margin-top:139px; }
 /*__/Contact Us Page*/
 
 /*__/Single Page News*/
@@ -539,6 +548,7 @@ i.fa-pause.__video--btn:hover{ opacity:1.0; color:#002557; }
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
+	height:100%;
 }
 .testimonials-page-container .testimonial-item:after{
 	/* background: rgba(255, 255, 255, 0.5); */
@@ -555,6 +565,12 @@ i.fa-pause.__video--btn:hover{ opacity:1.0; color:#002557; }
 	filter: grayscale(100%);
 	z-index: 0;
 }
+.testimonials-page-container .testimonial-item .modal-title{ color:#002557; font-size:16px; font-weight:700; font-family:'Heebo'; line-height:1; text-transform:capitalize; letter-spacing:2px; }
+.testimonials-page-container .testimonial-item .modal-title > span{ font-size:18px; }
+.testimonials-page-container .testimonial-item .modal-text,
+.testimonials-page-container .testimonial-item p{ color:#000000; font-size:14px; font-family:'Heebo'; line-height:1.5; }
+.testimonials-page-container .testimonial-item .modal-reviewer-of-name{ color:#002557; font-size:14px; font-weight:700; font-family:'Heebo'; text-transform:capitalize; }
+.testimonials-page-container .testimonial-item .modal-position-of-reviewer{ color:#000000; font-size:14px; font-family:'Heebo'; line-height:1.2; }
 /*__/Testimonials Page*/
 
 
@@ -699,6 +715,10 @@ i.fa-pause.__video--btn:hover{ opacity:1.0; color:#002557; }
 	/*Page-banner*/
 	.page-banner{ min-height:275px; }
 	/*__/Page-banner*/
+
+	/*Contact Us Page*/
+	.contact-page-container .contact-page-form{ margin-top:55px; }
+	/*__/Contact Us Page*/
 }
 
 @media screen and (max-width: 465px){
@@ -712,4 +732,9 @@ i.fa-pause.__video--btn:hover{ opacity:1.0; color:#002557; }
 	/*__/Resources Page*/
 	.resources-page-container .resources-excels-forms .news-post-article-helpful > .news-title p{ font-size:13px; }
 	/*__/Resources Page*/
+
+	/*Testimonials Page*/
+	.testimonials-page-container .testimonial-item .modal-text,
+	.testimonials-page-container .testimonial-item p { line-height:1.2; text-align:justify; text-justify:inter-word; word-spacing:-2px; }
+	/*__/Testimonials Page*/
 }

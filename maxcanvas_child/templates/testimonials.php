@@ -6,32 +6,30 @@
  */
 ?>
 <?php get_header();?>
-<div class="testimonials-page-container position-relative mb-md-5 mb-1 d-none">
+<?php
+$testimonials_posts = get_needs_posts('testimonials', -1, 0, '', 'date', 'ASC');
+?>
+<div class="testimonials-page-container position-relative mb-md-5 mb-1">
 	<?php get_template_part('templates/component/page-banner');?>
 
 	<div class="container-lg mt-md-5 mt-2">
+		<?php if( count($testimonials_posts) > 0 ):?>
 		<div class="row">
-			<div class="col-6 text-center">
-				<div class="testimonial-item position-relative">
-					<h5 class="modal-title"> “Testimonial-1” </h5>
-					<p class="modal-text">
-						Testimonial-1: Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Est ullamcorper eget nulla facilisi etiam dignissim diam. Massa sed elementum tempus egestas sed sed risus. Non enim praesent elementum facilisis leo. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Hendrerit dolor magna eget est lorem ipsum dolor sit. Dolor sed viverra ipsum nunc aliquet. Vulputate mi sit amet mauris. Urna porttitor rhoncus dolor purus. Aliquam malesuada bibendum arcu vitae. At urna condimentum mattis pellentesque. Arcu dui vivamus arcu felis bibendum ut. Diam volutpat commodo sed egestas.
-					</p>
-					<p class="modal-reviewer-of-name mt-4 mb-2">Joy Andrev</p>
-					<p class="modal-position-of-reviewer mb-0">Head of supply department</p>
+			<?php foreach($testimonials_posts as $testimonial_post):?>
+			<div class="col-lg-6 col-12 text-center mb-4">
+				<div class="testimonial-item position-relative d-flex align-items-center  py-4 px-4">
+					<div class="position-relative text-center" style="z-index:1;">
+						<h5 class="modal-title mb-3"><span>“</span><?=$testimonial_post->post_title;?><span>”</span></h5>
+						<?=$testimonial_post->post_content;?>
+						<p class="modal-reviewer-of-name text-center mt-4 mb-2"><?=get_field('name_of_reviewer',$testimonial_post->ID);?></p>
+						<p class="modal-position-of-reviewer text-center mb-0"><?=get_field('caption_under_name_of_reviewer',$testimonial_post->ID);?></p>
+					</div>
 				</div>
 			</div>
-			<div class="col-6 text-center">
-				<div class="testimonial-item position-relative">
-					<h5 class="modal-title"> “Testimonial-2” </h5>
-					<p class="modal-text">
-						Testimonial-2: Quis enim lobortis scelerisque fermentum dui faucibus in ornare quam. Est ullamcorper eget nulla facilisi etiam dignissim diam. Massa sed elementum tempus egestas sed sed risus. Non enim praesent elementum facilisis leo. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Hendrerit dolor magna eget est lorem ipsum dolor sit. Dolor sed viverra ipsum nunc aliquet. Vulputate mi sit amet mauris. Urna porttitor rhoncus dolor purus. Aliquam malesuada bibendum arcu vitae. At urna condimentum mattis pellentesque. Arcu dui vivamus arcu felis bibendum ut. Diam volutpat commodo sed egestas.
-					</p>
-					<p class="modal-reviewer-of-name mt-4 mb-2">Andrev Joy Andrev</p>
-					<p class="modal-position-of-reviewer mb-0">Developper</p>
-				</div>
-			</div>
+			<?php endforeach;?>
 		</div>
+		<?php endif;?>
 	</div>
+
 </div>
 <?php get_footer();?>
