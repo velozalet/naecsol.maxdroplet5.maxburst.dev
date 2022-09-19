@@ -32,13 +32,15 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 		const navbarContainer = navbar.querySelector('.container');
 		const btnNavbarToggler = navbar.querySelector('button.navbar-toggler');
 
-		btnNavbarToggler.addEventListener('click', (event) => {
+		btnNavbarToggler.addEventListener('click', (event) => { //console.log('OPEN');
 			if( !event.currentTarget.classList.contains('collapsed') ){
 				navbarContainer.style.backgroundColor = '#EAEAEA';
 				headerBanner.classList.toggle('d-none');
+				event.currentTarget.nextElementSibling.classList.add('vh-100');
 			}else{
-				navbarContainer.style.backgroundColor = 'inherit';
+				navbarContainer.style.backgroundColor = 'inherit'; //console.log('CLOSED');
 				headerBanner.classList.toggle('d-none');
+				event.currentTarget.nextElementSibling.classList.remove('vh-100');
 			}
 		});
 	}

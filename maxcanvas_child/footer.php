@@ -99,9 +99,7 @@
 					<div class="col-lg-3 col-md-12 text-lg-start text-md-center mt-md-0 mt-3">
 						<div class="subscribe-us">
 							<div class="fw-bold pb-2">Subscribe to our newsletter</div>
-							<script type="text/javascript" src="https://form.jotform.com/jsform/222584168603963"></script>
-							<!--<p class="text-lg-center text-md-start">E-mail</p><button type="button" class="button button-blue me-2 text-center">Subscribe</button>-->
-
+							<?php if( get_field('code_form_subscribe_jotform','options') ):?> <?=get_field('code_form_subscribe_jotform','options');?> <?php endif;?>
 
 							<div class="follow-us mt-3">
 								<div> <span>Follow us</span>
