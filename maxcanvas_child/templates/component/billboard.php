@@ -15,7 +15,7 @@ $buckets_for_slider = get_field('buckets__for_slider_tab', get_the_ID())[0]['buc
 				<?php foreach( $slider as $slide ):?>
 				<li  class="billboard-slide--item d-flex align-items-center splide__slide" style="background-image:url(<?=$slide['image_slide']['url'];?>);">
 					<div class="container-lg">
-						<div class="row">
+						<div class="row billboard-content-padding-start">
 							<div class="col-12 position-relative" style="z-index:1;">
 								<h1 class="text-uppercase text-xl-start text-lg-center text-center">
 									<!--<div> <span>North American</span> <span class="d-md-block">E-commerce Solutions -1</span> </div>-->

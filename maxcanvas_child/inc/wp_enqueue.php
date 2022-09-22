@@ -38,6 +38,11 @@ if ( ! function_exists( 'maxcanvas_child_scripts_styles' ) ):
 			'billboardSettings_autoplay' => get_field('autoplay', 6),
 			'billboardSettings_speed' => get_field('speed', 6),
 			'billboardSettings_arrows_navigation' => get_field('arrows_navigation', 6),
+
+			'testimonialSliderAutoplay' => get_field('section_selection',6)[3]['testimonial_slider_autoplay'],
+			'testimonialSliderSpeed' => get_field('section_selection',6)[3]['testimonial_slider_speed'],
+			'clientsLogosSliderAutoplay' => get_field('section_selection',6)[3]['our_clients_logos_slider_autoplay'],
+			'clientsLogosSliderSpeed' => get_field('section_selection',6)[3]['our_clients_logos_slider_speed'],
 		));
 	}
 endif;

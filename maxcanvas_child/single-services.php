@@ -1,5 +1,8 @@
 <?php get_header();?>
 <?php
+$single_service_bunner = get_field('service_bunner', get_the_ID()); //dd($single_service_bunner);
+$single_service_title = get_field('service_title', get_the_ID());
+$single_service_subtitle = get_field('service_subtitle', get_the_ID());
 $background_selection = get_field('background_selection', get_the_ID());
 $video_upload = get_field('video_upload', get_the_ID());
 $image_upload = get_field('image_upload', get_the_ID());
@@ -22,13 +25,18 @@ if($services_list){
 }
 ?>
 <div class="single-services-container position-relative mb-5">
-
-	<?php get_template_part('templates/component/page-banner');?>
+	<?php if( $single_service_bunner ):?>
+		<?php get_template_part('templates/component/page-service-banner');?>
+	<?php else:?>
+		<?php get_template_part('templates/component/page-banner');?>
+	<?php endif;?>
 
 	<div class="single-services-content mt-5 mb-5">
 		<div class="container-lg">
 			<div class="row">
 				<div class="col-md col-12 align-self-center pe-lg-5 pe-2">
+					<?php if( $single_service_title ):?><h2 class="mb-3"><?=$single_service_title;?></h2><?php endif;?>
+					<?php if( $single_service_subtitle ):?><h5><?=$single_service_subtitle;?></h5><?php endif;?>
 					<?php if( have_posts() ) :?>
 						<?php while( have_posts() ) : the_post(); ?>
 							<div class="pe-lg-5 pe-0 text-md-start text-center">
@@ -73,7 +81,7 @@ if($services_list){
 				<div class="col services-list--1">
 					<?php foreach( $services_list1 as $service1 ):?>
 					<figure class="d-block mb-0">
-						<img class="me-1" src="<?=$service1['service_icon'];?>" alt="Naecsol Service icon" >
+						<?php if( $service1['service_icon'] ):?><img class="me-1" src="<?=$service1['service_icon'];?>" alt="Naecsol Service icon"><?php endif;?>
 						<figcaption class="d-inline-block position-relative"><?=$service1['service_title'];?></figcaption>
 						<p class="mt-2 mb-2"><?=$service1['service_subtitle'];?></p>
 					</figure> <hr class="mt-0 mb-4" style="color:#002557;">
@@ -84,7 +92,7 @@ if($services_list){
 				<div class="col services-list--1">
 					<?php foreach( $services_list2 as $service2 ):?>
 					<figure class="d-block mb-0">
-						<img class="me-1" src="<?=$service2['service_icon'];?>" alt="Naecsol Service icon" >
+						<?php if( $service2['service_icon'] ):?><img class="me-1" src="<?=$service2['service_icon'];?>" alt="Naecsol Service icon" ><?php endif;?>
 						<figcaption class="d-inline-block position-relative"><?=$service2['service_title'];?></figcaption>
 						<p class="mt-2 mb-2"><?=$service2['service_subtitle'];?></p>
 					</figure> <hr class="mt-0 mb-4" style="color:#002557;">

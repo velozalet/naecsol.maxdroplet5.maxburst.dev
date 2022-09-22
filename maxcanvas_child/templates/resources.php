@@ -16,7 +16,7 @@ $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 	<?php get_template_part('templates/component/page-banner');?>
 
 	<!--All resources except "Excel"-->
-	<div class="container-lg mt-md-5 mt-2">
+	<div class="container-lg mt-md-5 mt-4">
 		<h2 class="text-md-start text-center">Helpful Links</h2>
 		<div class="row mt-3 justify-content-center">
 		<?php foreach( $resources_posts as $resource ):?>
@@ -44,7 +44,7 @@ $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 				}
 				?>
 				<div class="news-post helpful-post" data-postid="<?=$resource->ID;?>">
-					<a class="position-relative" href="<?=$resource_upload;?>" target="_blank" data-bs-toggle="tooltip" title="<?=$resource_type;?>">
+					<a class="position-relative" href="<?=$resource_upload;?>" target="_blank">
 						<?php if( $resource_type_selection !== 'video' ):?>
 						<article class="news-post-article news-post-article-helpful" style="background-image:url(<?=$post_attachment_img;?>);"></article>
 						<?php else:?>
@@ -61,12 +61,13 @@ $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 			<?php endif;?>
 		<?php endforeach;?>
 		</div>
-		<hr style="color:#002557;">
+		<hr class="mt-md-5 md-2" style="color:#002557;">
 	</div>
+	<div class="w-100"></div>
 	<!--All resources except "Excel"-->
 
 	<!--Excel documents-->
-	<div class="container-lg mt-md-5 mt-2">
+	<div class="container-lg mt-md-5 mt-4">
 		<h2 class="text-md-start text-center">FORMS</h2>
 		<div class="row mt-3 justify-content-center">
 			<?php foreach( $resources_posts as $resource ):?>
@@ -85,12 +86,12 @@ $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 						?>
 
 						<div class="news-post helpful-post" data-postid="<?=$resource->ID;?>">
-							<a class="position-relative" href="<?=$resource_upload;?>" data-bs-toggle="tooltip" title="<?=$resource_type;?>">
-								<article class="news-post-article news-post-article-helpful position-relative" style="background-image:url(<?=get_stylesheet_directory_uri();?>/img/bg-resources-excel-form.png);" alt="Naecsol Excel Form">
+							<a class="position-relative" href="<?=$resource_upload;?>">
+								<article class="news-post-article news-post-article-helpful news-post-article-helpful-forms position-relative" style="background-image:url(<?=get_stylesheet_directory_uri();?>/img/bg-resources-excel-form.png);" alt="Naecsol Excel Form">
 									<div class="news-title text-center px-3">
 										<h5 class="text-center"><?=$resource->post_title;?></h5>
-										<?=$resource->post_content;?>
-										<button type="button" class="button button-blue me-2 text-center">Download Form</button>
+										<div class="form-text-content"><?=$resource->post_content;?></div>
+										<button type="button" class="button button-blue me-2 mt-3 text-center">Download Form</button>
 									</div>
 								</article>
 							</a>

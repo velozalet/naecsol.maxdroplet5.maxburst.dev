@@ -1,4 +1,5 @@
 /*Splide slider on Billboard*/
+#splide_billboard_slide .billboard-content-padding-start{ padding-left:100px; }
 #splide_billboard_slide .splide__list{ position:relative; z-index:0; }
 #splide_billboard_slide .splide__list .splide__slide{
 	min-height: 605px;
@@ -86,6 +87,7 @@
 	.billboard.billboard-slide .splide-billboard .billboard-slide--item h1 { width: 100%; }
 }
 @media screen and (max-width: 1199px){
+	#splide_billboard_slide .billboard-content-padding-start{ padding-left:0; }
 	.billboard.billboard-slide .splide-billboard .billboard-slide--item h1 { width:100%; }
 	.billboard.billboard-slide .splide-billboard .billboard-slide--item .row:nth-of-type(2) > div p { padding: 0; }
 	.billboard.billboard-slide .splide-billboard .billboard-slide--item .row:nth-of-type(2) > div h4,

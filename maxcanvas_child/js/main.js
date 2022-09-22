@@ -182,6 +182,11 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	
 	/*__/Flexible-Content: .our-clients-section-container*/
 	if( document.getElementById('testimonials_slider') ){
+		splideTestimonialsSettings = {
+			autoplay: (globalData.testimonialSliderAutoplay === '1') ? true : false,
+			interval: globalData.testimonialSliderSpeed * 1000,
+		}
+
 		var splideTestimonials = new Splide( '#testimonials_slider',{ //All settings: https://splidejs.com/guides/options
 			type: 'loop',
 			perPage: 2,
@@ -195,8 +200,10 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			// focus : 'center',
 			gap: '25px', //padding: '20%',
 			perMove: 2,
+			speed: 2000,
+			interval: splideTestimonialsSettings.interval,
 			pagination: false,
-			autoplay: false,
+			autoplay: splideTestimonialsSettings.autoplay,
 			arrows: true
 		} );
 		splideTestimonials.mount();
@@ -226,6 +233,11 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 	}
 
 	if( document.getElementById('client_logos_slider') ){
+		clientLogosSliderSettings = {
+			autoplay: (globalData.clientsLogosSliderAutoplay === '1') ? true : false,
+			interval: globalData.clientsLogosSliderSpeed * 1000,
+		}
+
 		var clientLogosSlider = new Splide( '#client_logos_slider',{ //All settings: https://splidejs.com/guides/options
 			type: 'loop',
 			perPage: 5,
@@ -240,7 +252,9 @@ document.addEventListener( 'DOMContentLoaded', function () { //console.log('init
 			gap: '25px', //padding: '20%',
 			perMove: 1,
 			pagination: false,
-			autoplay: false,
+			speed: 2000,
+			autoplay: clientLogosSliderSettings.autoplay,
+			interval: clientLogosSliderSettings.interval,
 			arrows: true
 		} );
 		clientLogosSlider.mount();
