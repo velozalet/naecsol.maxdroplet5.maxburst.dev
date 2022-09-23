@@ -3,6 +3,69 @@
   <component name="ChangeListManager">
     <list default="true" id="c712dfdd-7f54-49f9-a120-f47e3ca2cad5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/404.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/css/home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/front-page.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/address-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/bg-resources-excel-form.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/email-footer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/email-header.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/email-us-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/excel_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/excel_default2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/excel_default_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/facebook-footer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/facebook-header.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/gps-footer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/in-footer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/in-header.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/pdf_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/phone-call-icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/phone-footer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/phone-header.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/play-icon-for-video.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/twitter-footer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/img/video_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/inc/extras.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/inc/init.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/inc/widgets.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/inc/wp_enqueue.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/js/about_us.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/js/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/screenshot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/single-post.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/single-services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/splide_slider/splide.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/splide_slider/splide.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/_modal_window_request_demo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/_modal_window_request_quote.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/_modal_window_testimonial.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/billboard-sub.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/billboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/page-banner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/page-service-banner.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/component/recent-news-posts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content/about_us_section.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content/full_video_section.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content/our_clients_section.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content/our_services_section.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/content/flexible-content/recent_news_posts.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/news.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/resources.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/services.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/templates/testimonials.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/wow-animation/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxcanvas_child/wow-animation/wow.min.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +79,8 @@
       <file leaf-file-name="info.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/info.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="152">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -27,6 +90,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>'tax_query' =&gt; array(</find>
+      <find>resources-default.png</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -41,10 +105,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="68" />
-    <option name="y" value="239" />
-    <option name="width" value="1522" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="1779" />
+    <option name="y" value="54" />
+    <option name="width" value="1512" />
     <option name="height" value="109" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,11 +125,6 @@
               <item name="naecsol.maxdroplet5.maxburst.dev" type="b2602c69:ProjectViewProjectNode" />
               <item name="naecsol.maxdroplet5.maxburst.dev" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="naecsol.maxdroplet5.maxburst.dev" type="b2602c69:ProjectViewProjectNode" />
-              <item name="naecsol.maxdroplet5.maxburst.dev" type="462c0819:PsiDirectoryNode" />
-              <item name="maxcanvas_child" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -74,7 +133,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PhpstormProjects/naecsol.dev" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -117,26 +176,28 @@
       <workItem from="1663606478990" duration="56000" />
       <workItem from="1663612804952" duration="113000" />
       <workItem from="1663863116446" duration="44000" />
+      <workItem from="1663870945928" duration="64000" />
+      <workItem from="1663923325885" duration="753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3687000" />
+    <option name="totallyTimeSpent" value="4504000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1533" height="875" extended-state="6" />
-    <editor active="true" />
+    <frame x="1779" y="54" width="1512" height="109" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21923335" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5994624" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21923335" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884097" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.5983828" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -145,7 +206,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +215,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/info.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -281,10 +355,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/maxcanvas_child/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maxcanvas_child/templates/resources.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="31" column="216" selection-start-line="31" selection-start-column="216" selection-end-line="31" selection-end-column="216" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/info.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
