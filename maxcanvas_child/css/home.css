@@ -3,22 +3,21 @@
 #splide_billboard_slide .splide__list{ position:relative; z-index:0; }
 #splide_billboard_slide .splide__list .splide__slide{
 	min-height: 605px;
-	background-repeat: no-repeat;
-	background-size: cover;
+	/*background-repeat:no-repeat; background-size:cover;*/
 	z-index: -1;
+	/*filter: grayscale(100%);*/
 }
 #splide_billboard_slide .splide__list .splide__slide:after{
 	content: '';
-	background-color: #000000;
-	opacity: .75;
-	/*background: linear-gradient(91deg, rgb(10 10 10) 0%, rgb(21 21 24 / 26%) 100%, rgb(28 33 34) 100%);*/
+	/*background-color: #000000; opacity: .75;*/
+	background:linear-gradient(270deg, rgb(10 10 10) 0%, rgb(21 21 24 / 34%) 100%, rgb(28 33 34) 100%);
+	/*background:linear-gradient(91deg, rgb(10 10 10) 0%, rgb(21 21 24 / 26%) 100%, rgb(28 33 34) 100%);*/
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-	-webkit-filter:grayscale(100%); filter:grayscale(100%);
-	z-index: -1;
+	z-index: 0;
 }
 
 

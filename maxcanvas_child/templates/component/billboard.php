@@ -13,7 +13,7 @@ $buckets_for_slider = get_field('buckets__for_slider_tab', get_the_ID())[0]['buc
 			<ul class="splide__list">
 				<?php $icnt = 1;?>
 				<?php foreach( $slider as $slide ):?>
-				<li  class="billboard-slide--item d-flex align-items-center splide__slide" style="background-image:url(<?=$slide['image_slide']['url'];?>);">
+				<li  class="billboard-slide--item d-flex align-items-center splide__slide">
 					<div class="container-lg">
 						<div class="row billboard-content-padding-start">
 							<div class="col-12 position-relative" style="z-index:1;">
@@ -63,6 +63,8 @@ $buckets_for_slider = get_field('buckets__for_slider_tab', get_the_ID())[0]['buc
 						</div>
 						<?php endif;?>
 					</div>
+
+					<div class="bg-image" style="background-image:url(<?=$slide['image_slide']['url'];?>);"></div>
 
 					<!-- IF VIDEO isset for this Slide -->
 					<?php if( $slide['video_slide'] ):?>

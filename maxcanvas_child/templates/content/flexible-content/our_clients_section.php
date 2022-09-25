@@ -4,7 +4,8 @@ $testimonials_posts = get_needs_posts('testimonials', -1, 0, '', 'date', 'ASC');
 $our_clients_logos = get_sub_field('our_clients_section_logos');
 ?>
 <div id="our_clients_section_container" class="our-clients-section-container mt-5 position-relative">
-	<div class="background-image d-sm-grid d-block justify-content-center align-items-center" style="background-image: url(<?=$our_clients_section_background;?>);">
+	<div class="background-image d-sm-grid d-block justify-content-center align-items-center">
+		<div class="bg-image" style="background-image: url(<?=$our_clients_section_background;?>);"></div>
 		<div class="our-clients-section-content position-relative py-5">
 			<div class="container">
 				<h2 class="text-center mb-3"><?=get_sub_field('our_clients_section_title');?></h2>
