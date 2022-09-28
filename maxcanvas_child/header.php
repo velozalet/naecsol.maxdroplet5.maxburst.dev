@@ -41,6 +41,7 @@
 				</div>
 			</div>
 		</div>
+		<?=do_shortcode('[gtranslate]'); ?>
 	</div>
 	<!-- end banner-->
 	<!--NavBar-->

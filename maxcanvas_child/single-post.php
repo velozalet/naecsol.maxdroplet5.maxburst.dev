@@ -6,7 +6,11 @@ $recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_
 ?>
 
 <div class="single-news-container position-relative mb-md-5 mb-1">
-	<?php get_template_part('templates/component/page-banner');?>
+	<?php if( get_fields('options')['site_settings']['banner_resources_n_news'] ):?>
+		<?php get_template_part('templates/component/page-resources-news-banner');?>
+	<?php else:?>
+		<?php get_template_part('templates/component/page-banner');?>
+	<?php endif;?>
 
 	<?php if( get_field('flexible_content_areas_for_news') ):?>
 	<section class="single-news-content mt-md-5 mt-4">
@@ -23,7 +27,7 @@ $recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_
 						<?php endif;?>
 						<?php if( $column1_flexblock['acf_fc_layout'] == 'video_upload' ):?>
 							<?php if( $column1_flexblock['video_upload'] ):?>
-								<div class="single-news-content--video position-relative my-3">
+								<div class="single-news-content--video position-relative my-5">
 									<i class="fa fa-play-circle __video--btn" id="singleNewsVideo1Btn"></i>
 									<video id="single_news_video1" class="w-100"> <!--controls|autoplay|loop|muted-->
 										<source src="<?=$column1_flexblock['video_upload'];?>" type="video/mp4" />
@@ -50,7 +54,7 @@ $recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_
 							<?php endif;?>
 							<?php if( $column2_flexblock['acf_fc_layout'] == 'video_upload' ):?>
 								<?php if( $column2_flexblock['video_upload'] ):?>
-									<div class="single-news-content--video position-relative my-3">
+									<div class="single-news-content--video position-relative my-5">
 										<i class="fa fa-play-circle __video--btn" id="singleNewsVideo2Btn"></i>
 										<video id="single_news_video2" class="w-100"> <!--controls|autoplay|loop|muted-->
 											<source src="<?=$column2_flexblock['video_upload'];?>" type="video/mp4" />

@@ -13,7 +13,11 @@ $resources_posts = get_needs_posts('post', $number_of_posts_to_display, $news_ca
 $resource_upload = ''; $resource_type = ''; $post_attachment_img = '';
 ?>
 <div class="resources-page-container position-relative mb-md-5 mb-1">
-	<?php get_template_part('templates/component/page-banner');?>
+	<?php if( get_fields('options')['site_settings']['banner_resources_n_news'] ):?>
+		<?php get_template_part('templates/component/page-resources-news-banner');?>
+	<?php else:?>
+		<?php get_template_part('templates/component/page-banner');?>
+	<?php endif;?>
 
 	<!--All resources except "Excel"-->
 	<div class="container-lg mt-md-5 mt-4">
