@@ -2,7 +2,7 @@
 <?php
 $news_cat_ID = 5; //This is category "News" of News Post
 $number_of_posts_to_display = 3;
-$recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_cat_ID, '', 'date', 'DESC');
+$recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_cat_ID, '', 'date', 'DESC'); //dd($recent_news_posts);
 ?>
 
 <div class="single-news-container position-relative mb-md-5 mb-1">
@@ -27,7 +27,7 @@ $recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_
 						<?php endif;?>
 						<?php if( $column1_flexblock['acf_fc_layout'] == 'video_upload' ):?>
 							<?php if( $column1_flexblock['video_upload'] ):?>
-								<div class="single-news-content--video position-relative my-5">
+								<div class="single-news-content--video position-relative mt-5 mb-3">
 									<i class="fa fa-play-circle __video--btn" id="singleNewsVideo1Btn"></i>
 									<video id="single_news_video1" class="w-100"> <!--controls|autoplay|loop|muted-->
 										<source src="<?=$column1_flexblock['video_upload'];?>" type="video/mp4" />
@@ -41,8 +41,21 @@ $recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_
 							<?php endif;?>
 						<?php endif;?>
 					<?php endforeach;?>
+
+											<?php $s=false; if($s):?>
+												<?php if( have_posts() ) :?>
+													<?php while( have_posts() ) : the_post(); ?>
+														<?php the_content();?>
+													<?php endwhile;?>
+												<?php endif;?>
+											<?php endif;?>
+
+					<div class="share-with-addtoany-plugin d-md-block d-none"> <!---->
+						<?php dynamic_sidebar('share_links'); ?>
+					</div>
 				</div>
 				<?php endif;?>
+
 
 				<?php if( get_field('flexible_content_areas_for_news')['column_2_flexible_content'] ):?>
 					<div class="col-md-6 col-12 single-news-content-column_2">
@@ -70,6 +83,10 @@ $recent_news_posts = get_needs_posts('post', $number_of_posts_to_display, $news_
 						<?php endforeach;?>
 					</div>
 				<?php endif;?>
+
+				<div class="share-with-addtoany-plugin d-md-none d-block"> <!---->
+					<?php dynamic_sidebar('share_links'); ?>
+				</div>
 			</div> <!--.row-->
 		</div> <!--.container-->
 	</section>

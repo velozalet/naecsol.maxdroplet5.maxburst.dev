@@ -52,5 +52,12 @@ function maxcanvas_widgets_init() {
     'before_title' => '<h3>',
     'after_title' => '</h3>',
   ));
+
+register_sidebar( array(
+	'name' => 'Share Links',
+	'id' => 'share_links',
+	'before_title' => '',
+	'after_title' => ''
+));
 }
 

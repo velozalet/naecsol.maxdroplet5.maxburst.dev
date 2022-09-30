@@ -33,6 +33,11 @@
 					<?php endif;?>
 				<?php endif;?>
 				</div>
+
+<!--				<div class="__switcher __switcher--desk"></div>-->
+					<?=do_shortcode('[gtranslate]');?>
+
+
 				<div class="col-md-auto col-6 text-md-start text-sm-start text-start order-md-2 order-1">
 					<a class="__email" href="mailto:<?=get_fields('options')['site_settings']['site_email'];?>"><i class="fa fa-envelope-o circle"></i><?=get_fields('options')['site_settings']['site_email'];?></a>
 				</div>
@@ -41,7 +46,8 @@
 				</div>
 			</div>
 		</div>
-		<?=do_shortcode('[gtranslate]'); ?>
+
+		<?php $s=false; if($s):?><?=do_shortcode('[gtranslate]');?><?php endif;?>
 	</div>
 	<!-- end banner-->
 	<!--NavBar-->
@@ -109,6 +115,9 @@
 									<a class="social-link" href="<?=get_fields('options')['site_settings']['social_links'][0]["twitter"];?>" target="_blank"><i class="fa fa-twitter circle"></i></a>
 								<?php endif;?>
 							<?php endif;?>
+						</li>
+						<li class="nav-item mb-3">
+							<?=do_shortcode('[gtranslate]');?>
 						</li>
 					</div>
 				</ul>

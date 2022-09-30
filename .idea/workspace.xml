@@ -15,7 +15,7 @@
         <entry file="file://$PROJECT_DIR$/info.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+              <caret line="4" column="60" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -115,11 +115,12 @@
       <workItem from="1663923325885" duration="911000" />
       <workItem from="1664088894068" duration="43000" />
       <workItem from="1664088981821" duration="208000" />
+      <workItem from="1664347725045" duration="272000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4913000" />
+    <option name="totallyTimeSpent" value="5185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
@@ -133,7 +134,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.60107815" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.6024259" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -152,6 +153,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/info.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/info.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -323,7 +331,7 @@
     <entry file="file://$PROJECT_DIR$/info.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="60" />
         </state>
       </provider>
     </entry>

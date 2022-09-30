@@ -124,13 +124,13 @@ if($services_list){
 			<div class="row">
 				<div class="col-12 text-xl-end text-md-center text-center mt-3">
 					<button type="button" href="#" class="text-center button button-blue me-sm-2 me-0 mb-3" data-bs-toggle="modal" data-bs-target="#servicesListRequestQuote">Request a quote</button>
-					<button type="button" href="#" class="text-center button button-white" data-bs-toggle="modal" data-bs-target="#servicesListRequestDemo">Request a demo</button>
+					<!--<button type="button" href="#" class="text-center button button-white" data-bs-toggle="modal" data-bs-target="#servicesListRequestDemo">Request a demo</button>-->
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<?php get_template_part('templates/component/_modal_window_request_quote');?>
-	<?php get_template_part('templates/component/_modal_window_request_demo');?>
+	<?php //get_template_part('templates/component/_modal_window_request_demo');?>
 </div>
 <?php get_footer();?>
