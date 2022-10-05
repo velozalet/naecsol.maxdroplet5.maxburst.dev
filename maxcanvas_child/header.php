@@ -33,10 +33,9 @@
 					<?php endif;?>
 				<?php endif;?>
 				</div>
-
-<!--				<div class="__switcher __switcher--desk"></div>-->
+					<?php $s=false; if($s):?>
 					<?=do_shortcode('[gtranslate]');?>
-
+					<?php endif;?>
 
 				<div class="col-md-auto col-6 text-md-start text-sm-start text-start order-md-2 order-1">
 					<a class="__email" href="mailto:<?=get_fields('options')['site_settings']['site_email'];?>"><i class="fa fa-envelope-o circle"></i><?=get_fields('options')['site_settings']['site_email'];?></a>
@@ -47,7 +46,7 @@
 			</div>
 		</div>
 
-		<?php $s=false; if($s):?><?=do_shortcode('[gtranslate]');?><?php endif;?>
+		<?=do_shortcode('[gtranslate]');?>
 	</div>
 	<!-- end banner-->
 	<!--NavBar-->
@@ -76,10 +75,10 @@
 								<li class="nav-item dropdown" data-itemid="<?=$menuitems[$i]->ID;?>" data-itemobject="<?=$menuitems[$i]->object;?>">
 									<a class="nav-link dropdown-toggle <?=(strtoupper($currentUrl) == '/'.strtoupper($menuitems[$i]->title).'/') ? 'current-menu-item' : '';?>" href="<?=$menuitems[$i]->url;?>" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?=$menuitems[$i]->title;?></a>
 									<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<li data-itemid="<?=$menuitems[$i]->ID;?>" data-itemobject="<?=$menuitems[$i]->object;?>" style="display:none;">
+										<li data-itemid="<?=$menuitems[$i]->ID;?>" data-itemobject="<?=$menuitems[$i]->object;?>">
 											<a class="dropdown-item" href="<?=$menuitems[$i]->url;?>"><?=$menuitems[$i]->title;?></a>
 										</li>
-										<li style="display:none;"><hr class="dropdown-divider"></li>
+										<li><hr class="dropdown-divider"></li>
 										<?php foreach( $sub_items_services as $sub_i_services ):?>
 											<li class="py-md-0 py-1" data-itemid="<?=$sub_i_services->ID;?>" data-itemobject="<?=$sub_i_services->object;?>">
 												<a class="dropdown-item" href="<?=$sub_i_services->url;?>"><?=$sub_i_services->title;?></a>
